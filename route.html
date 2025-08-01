@@ -3,20 +3,23 @@
 <head>
   <meta charset="utf-8">
   <title>ルートと移動手段</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- 追加：スマホ対応 -->
   <link rel="stylesheet" href="common/css/plan.css">
 </head>
 <body>
   <header><h1>移動ルート</h1></header>
+
   <nav>
     <ul>
       <li><a href="index.html">目的</a></li>
       <li><a href="schedule.html">日程</a></li>
-      <li><a href="route.html">ルート</a></li>
+      <li><a href="route.html" aria-current="page">ルート</a></li>
       <li><a href="lodging.html">宿泊</a></li>
       <li><a href="cost.html">費用</a></li>
       <li><a href="sources.html">情報源</a></li>
     </ul>
   </nav>
+
   <main>
     <section>
       <h2>出発～家族旅行</h2>
@@ -30,15 +33,17 @@
         <li>8/23 名古屋 → 神戸（家族車）</li>
         <li>8/24 神戸 → 尾道（家族車）</li>
       </ol>
-              <!-- 家族旅行ルートの地図埋め込み -->
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m40!1m12!1m3!1d1675946.7386131645!2d133.78547680561562!3d34.8729715433948!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m25!3e0!4m5!1s0x600364f81747fa87%3A0x5b0af7584741c087!2sUmemorizaka%2C%20Meito%20Ward%2C%20Nagoya%2C%20Aichi%20465-0065!3m2!1d35.140837399999995!2d137.0181758!4m5!1s0x3554e003a23324b3%3A0x7a4f8c2f6eba81b1!2sHimeji%20Castle%2C%2068%20Honmachi%2C%20Himeji%2C%20Hyogo%20670-0012!3m2!1d34.839449!2d134.6939047!4m5!1s0x3554f58294439ccd%3A0xf2929d172bbf6f97!2sGinpaso%2C%202-8%20Misaki%2C%20Ako%2C%20Hyogo%20678-0215!3m2!1d34.726906!2d134.407569!4m5!1s0x35510035fa7a6507%3A0x447111a31f89fa78!2sOnomichi%20Station%2C%201-1%20Higashigoshocho%2C%20Onomichi%2C%20Hiroshima%20722-0036!3m2!1d34.404895599999996!2d133.19355489999998!5e0!3m2!1sen!2sjp!4v1753599352999!5m2!1sen!2sjp"
-        width="600" height="450"
-        style="border:0;"
-        allowfullscreen
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade">
-      </iframe>
+
+      <!-- 家族旅行ルートの地図埋め込み：中央揃え -->
+      <div class="map-wrapper">
+        <iframe
+          class="map-embed"
+          src="https://www.google.com/maps/embed?pb=!1m40!1m12!1m3!1d1675946.7386131645!2d133.78547680561562!3d34.8729715433948!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m25!3e0!4m5!1s0x600364f81747fa87%3A0x5b0af7584741c087!2sUmemorizaka%2C%20Meito%20Ward%2C%20Nagoya%2C%20Aichi%20465-0065!3m2!1d35.140837399999995!2d137.0181758!4m5!1s0x3554e003a23324b3%3A0x7a4f8c2f6eba81b1!2sHimeji%20Castle%2C%2068%20Honmachi%2C%20Himeji%2C%20Hyogo%20670-0012!3m2!1d34.839449!2d134.6939047!4m5!1s0x3554f58294439ccd%3A0xf2929d172bbf6f97!2sGinpaso%2C%202-8%20Misaki%2C%20Ako%2C%20Hyogo%20678-0215!3m2!1d34.726906!2d134.407569!4m5!1s0x35510035fa7a6507%3A0x447111a31f89fa78!2sOnomichi%20Station%2C%201-1%20Higashigoshocho%2C%20Onomichi%2C%20Hiroshima%20722-0036!3m2!1d34.404895599999996!2d133.19355489999998!5e0!3m2!1sen!2sjp!4v1753599352999!5m2!1sen!2sjp"
+          allowfullscreen
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
     </section>
 
     <section>
@@ -47,15 +52,25 @@
         <li>尾道 → 今治：しまなみ海道 約70km 🚴🚗（サポートカー随伴）</li>
         <li>今治 → 松山：はまかぜ海道 約65km 🚴🚗</li>
       </ul>
-      <iframe src="https://www.google.com/maps/embed?pb=!1m34!1m12!1m3!1d422782.4046541396!2d132.64785976606308!3d34.121068805814275!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f20.1!4m19!3e0!4m5!1s0x3551004d24a327dd%3A0x4665f7fa20f28204!2z5bC-6YGT44KE44GZ44KJ44GO44Gu5a6_44GX44O844Gd44O8LCDml6XmnKzjgIHjgJI3MjItMDA3MyDluoPls7bnnIzlsL7pgZPluILlkJHls7bnlLrvvJjvvJTiiJLvvJI!3m2!1d34.404388499999996!2d133.2018692!4m5!1s0x355039790fbaffdb%3A0x107167936b23cf75!2z44K144Oz44Op44Kk44K657O45bGxLCDml6XmnKzjgIHjgJI3OTQtMDAwMSDmhJvlqpvnnIzku4rmsrvluILnoILloLTnlLrvvJLkuIHnm67vvJjiiJLvvJE!3m2!1d34.110163!2d132.97746619999998!4m5!1s0x354fe5ed7a20bf51%3A0x73f00e9b637779a8!2z5p2-5bGx44OL44Ol44O844Kw44Op44Oz44OJ44Ob44OG44OrLCDml6XmnKzjgIHjgJI3OTAtMDAwMiDmhJvlqpvnnIzmnb7lsbHluILkuoznlarnlLrvvJPkuIHnm67vvJTiiJLvvJHvvJA!3m2!1d33.839022799999995!2d132.7680751!5e0!3m2!1sja!2sus!4v1753594967893!5m2!1sja!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+      <!-- サイクリングコース地図：中央揃え -->
+      <div class="map-wrapper">
+        <iframe
+          class="map-embed"
+          src="https://www.google.com/maps/embed?pb=!1m34!1m12!1m3!1d422782.4046541396!2d132.64785976606308!3d34.121068805814275!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f20.1!4m19!3e0!4m5!1s0x3551004d24a327dd%3A0x4665f7fa20f28204!2z5bC-6YGT44KE44GZ44KJ44GO44Gu5a6_44GX44O844Gd44O8LCDml6XmnKzjgIHjgJI3MjItMDA3MyDluoPls7bnnIzlsL7pgZPluILlkJHls7bnlLrvvJjvvJTiiJLvvJI!3m2!1d34.404388499999996!2d133.2018692!4m5!1s0x355039790fbaffdb%3A0x107167936b23cf75!2z44K144Oz44Op44Kk44K657O45bGxLCDml6XmnKzjgIHjgJI3OTQtMDAwMSDmhJvlqpvnnIzku4rmsrvluILnoILloLTnlLrvvJLkuIHnm67vvJjiiJLvvJE!3m2!1d34.110163!2d132.97746619999998!4m5!1s0x354fe5ed7a20bf51%3A0x73f00e9b637779a8!2z5p2-5bGx44OL44Ol44O844Kw44Op44Oz44OJ44Ob44OG44OrLCDml6XmnKzjgIHjgJI3OTAtMDAwMiDmhJvlqpvnnIzmnb7lsbHluILkuoznlarnlLrvvJPkuIHnm67vvJTiiJLvvJHvvJA!3m2!1d33.839022799999995!2d132.7680751!5e0!3m2!1sja!2sus!4v1753594967893!5m2!1sja!2sus"
+          allowfullscreen
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
     </section>
 
     <section>
       <h2>帰宅</h2>
       <p>8/27 松山空港 → 羽田空港（ANA592）</p>
     </section>
-
   </main>
+
   <footer>&copy; 2025 TUSCC Summer Camp</footer>
 </body>
 </html>
