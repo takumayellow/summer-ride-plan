@@ -3,15 +3,22 @@
 <head>
   <meta charset="utf-8">
   <title>しまなみ海道ライド計画</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="common/css/plan.css">
 </head>
 <body>
-  <header>
-    <h1>ロードバイクサークル夏合宿 in しまなみ海道</h1>
-  </header>
-  <nav>
+  <!-- ヒーロー -->
+  <div class="hero" aria-label="ヒーローイメージ: 来島海峡大橋">
+    <div class="hero-overlay">
+      <h1>ロードバイクサークル夏合宿<br>in しまなみ海道</h1>
+      <div class="subtitle">瀬戸内海を渡る絶景ライドとチームライディング</div>
+    </div>
+  </div>
+
+  <!-- 目次 / ナビ -->
+  <nav id="site-nav" aria-label="ページ内ナビゲーション">
     <ul>
-      <li><a href="index.html">目的</a></li>
+      <li><a href="index.html" aria-current="page">目的</a></li>
       <li><a href="schedule.html">日程</a></li>
       <li><a href="route.html">ルート</a></li>
       <li><a href="lodging.html">宿泊</a></li>
@@ -19,17 +26,17 @@
       <li><a href="sources.html">情報源</a></li>
     </ul>
   </nav>
+
   <main>
     <section>
       <h2>旅行の目的</h2>
       <p>
-        東京理科大学ロードバイクサークル（TUSCC）の夏季合宿として、  
-        美しい瀬戸内海を渡る「しまなみ海道」を自転車で完走し、  
-        メンバー同士のチームビルディングと技術向上を図ります。
-        今年は27名が参加予定です。
-      <br>
-        ライドは尾道から松山まで約100km。  
-        風光明媚な島々や歴史ある街並みを巡りつつ、  
+        東京理科大学ロードバイクサークル（TUSCC）の夏季合宿として、<br>
+        美しい瀬戸内海を渡る「しまなみ海道」を自転車で完走し、<br>
+        メンバー同士のチームビルディングと技術向上を図ります。<br>
+        今年は27名が参加予定です。<br>
+        ライドは尾道から松山まで約100km。<br>
+        風光明媚な島々や歴史ある街並みを巡りつつ、<br>
         安全第一でチャレンジします。
       </p>
     </section>
@@ -38,11 +45,11 @@
       <h2>TUSCC 合宿の魅力</h2>
       <p>
         <strong>1. チームビルディング</strong><br>
-        集団でのライドを通じて、全員で協力し合うことで絆が深まります。<br><br>
+        集団ライドでの連携を通じて、全員の信頼と絆を深める。<br><br>
         <strong>2. スキル向上</strong><br>
-        海風やアップダウンの多いコースでペダリング技術やギア選択の経験を蓄積。<br><br>
+        海風やアップダウンの多い本格的なコースで、ペダリングやギア選択の経験を蓄積。<br><br>
         <strong>3. 観光要素</strong><br>
-        尾道ラーメン・今治焼き鳥・松山城など、地元グルメ＆名所巡りも楽しめます。
+        尾道ラーメン・今治焼き鳥・松山城など、地元の魅力も堪能。
       </p>
     </section>
 
@@ -63,6 +70,21 @@
       </ul>
     </section>
   </main>
+
   <footer>&copy; 2025 TUSCC Summer Camp</footer>
+
+  <script>
+    // スクロールで nav にクラス付与（影など）
+    const nav = document.getElementById("site-nav");
+    const hero = document.querySelector(".hero");
+    const threshold = hero ? hero.offsetHeight - 80 : 100;
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > threshold) {
+        nav.classList.add("scrolled");
+      } else {
+        nav.classList.remove("scrolled");
+      }
+    });
+  </script>
 </body>
 </html>
