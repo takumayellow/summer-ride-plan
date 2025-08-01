@@ -1,167 +1,150 @@
-/* common/css/plan.css */
+/* ===== 基本色・共通 ===== */
+:root {
+  --bg: #f6f7fb;
+  --ink: #222;
+  --muted: #666;
+  --brand: #022a55; /* 濃紺 */
+  --accent: #1e88e5; /* 青 */
+  --line: #c8d2e0;
+  --radius: 6px;
+  --max-width: 960px;
+  --gap: 1rem;
+  --header-height: auto;
+}
 
-/* ページ全体の基本設定 */
+/* ページ全体 */
+* {
+  box-sizing: border-box;
+}
 body {
-  margin-top: 0;
-  margin-right: 0;
-  margin-bottom: 0;
-  margin-left: 0;
+  margin: 0;
   font-family: "メイリオ", sans-serif;
   line-height: 1.5;
-  background-color: #f5f5f5;
-  color: #333;
+  background-color: var(--bg);
+  color: var(--ink);
 }
 
-/* ヘッダー */
+/* ヘッダー（ヒーロー的見出し領域） */
 header {
-  background-color: #025;
+  background-color: var(--brand);
   color: #fff;
-  padding-top: 10px;
-  padding-right: 10px;
-  padding-bottom: 10px;
-  padding-left: 10px;
+  padding: 1rem 1rem;
   text-align: center;
 }
-
-/* ナビゲーション（背景色だけ） */
-nav {
-  background-color: #025;
-  color: #fff;
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+  line-height: 1.1;
 }
 
-/* ナビゲーション内リスト */
+/* ナビゲーション */
+nav {
+  background-color: var(--brand);
+}
 nav ul {
-  list-style-type: none;
-  margin-top: 0;
-  margin-right: 0;
-  margin-bottom: 0;
-  margin-left: 0;
-  padding-top: 0;
-  padding-right: 0;
-  padding-bottom: 0;
-  padding-left: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  gap: 0.5rem;
 }
-
-/* リスト項目間の余白 */
 nav li {
-  margin-top: 5px;
-  margin-right: 10px;
-  margin-bottom: 5px;
-  margin-left: 10px;
+  margin: 0;
 }
-
-/* リンク文字色・装飾 */
 nav a {
   color: #fff;
   text-decoration: none;
+  font-size: 0.95rem;
+  padding: 0.25rem 0.5rem;
 }
 
-/* メインコンテンツ領域 */
+/* メイン領域 */
 main {
-  padding-top: 20px;
-  padding-right: 20px;
-  padding-bottom: 20px;
-  padding-left: 20px;
+  padding: 1.25rem 1.25rem 2rem;
   background-color: #fff;
-  max-width: 960px;
-  margin-top: 0;
-  margin-right: auto;
-  margin-bottom: 0;
-  margin-left: auto;
+  max-width: var(--max-width);
+  margin: 0 auto;
 }
 
-/* テーブル全体 */
+/* セクション */
+section {
+  margin: 2rem 0;
+}
+section h2 {
+  margin: 0 0 0.75rem;
+  padding: 0 0 4px;
+  border-bottom: 2px solid var(--brand);
+  font-size: 1.75rem;
+}
+
+/* テーブル */
 table {
   border-collapse: collapse;
   width: 100%;
+  margin: 0.5rem 0;
+  font-size: 0.95rem;
 }
-
-/* テーブルセル */
 th,
 td {
-  border-style: solid;
-  border-width: 1px;
-  border-color: #888;
-  padding-top: 6px;
-  padding-right: 6px;
-  padding-bottom: 6px;
-  padding-left: 6px;
+  border: 1px solid #888;
+  padding: 6px;
   text-align: left;
+  vertical-align: top;
+}
+@media (max-width: 800px) {
+  /* 横スクロールを許す */
+  table {
+    display: block;
+    overflow-x: auto;
+    width: 100%;
+  }
 }
 
-/* 画像と地図 iframe */
+/* 画像・地図・iframe */
 img,
 iframe {
   max-width: 100%;
-  height: 450px;
+  height: auto;
   display: block;
-  margin-top: auto;
-  margin-right: auto;
-  margin-bottom: auto;
-  margin-left: auto;
+  margin: auto;
+  border-radius: var(--radius);
 }
 
-/* プリフォーマットテキスト */
-pre {
-  background-color: #eee;
-  padding-top: 10px;
-  padding-right: 10px;
-  padding-bottom: 10px;
-  padding-left: 10px;
-  overflow: auto;
-}
-
-/* セクション間の余白 */
-section {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-}
-
-/* セクション見出し */
-section h2 {
-  padding-top: 0;
-  padding-right: 0;
-  padding-bottom: 4px;
-  padding-left: 0;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #025;
-}
-
-/* 左寄せ＋余白 */
+/* float画像の扱い */
 .float-left {
   float: left;
-  margin: 0 1rem 0 0;
-  max-width: 200px; /* テーブル内サイズに合わせておく */
+  margin: 0 1rem 1rem 0;
+  max-width: 200px;
   height: auto;
 }
-
-/* フロート解除用 */
 .clear-left {
   clear: left;
 }
-
-/* attribution（著作権表記）用クラス */
-.attribution {
-  font-size: 0.75rem;      /* 通常より小さく */
-  margin-top: 0;           /* 上の余白なし */
-  margin-bottom: 0.5rem;   /* 下は少しだけ */
-  color: #666;             /* 少し薄いグレー */
-  display: inline;          /* インライン 要素化 */
+@media (max-width: 720px) {
+  .float-left {
+    float: none;
+    display: block;
+    margin: 0 auto 1rem;
+    width: 100%;
+    max-width: none;
+  }
 }
 
-/* --------- ここから埋め込み地図のスタイル --------- */
+/* attribution */
+.attribution {
+  font-size: 0.75rem;
+  margin: 0 0 0.5rem;
+  color: var(--muted);
+  display: inline;
+}
 
-/* 地図ラッパー */
+/* 埋め込み地図 */
 .map-wrapper {
   max-width: 800px;
   margin: 1rem auto;
 }
-
-/* 地図埋め込み */
 .map-embed {
   width: 100%;
   height: 300px;
@@ -169,10 +152,18 @@ section h2 {
   display: block;
 }
 
-/* 画像レスポンシブ */
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: auto;
+/* pre */
+pre {
+  background-color: #eee;
+  padding: 10px;
+  overflow: auto;
+}
+
+/* 小見出し風に強調例（必要なら使う） */
+.highlight {
+  background: var(--accent);
+  color: #fff;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  display: inline-block;
 }
