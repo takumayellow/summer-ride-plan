@@ -9,6 +9,10 @@
 
 > **TODO:** 実際のスクリーンショットを追加してください。
 
+| トップページ | 日程ページ |
+|---|---|
+| ![トップページ](docs/screenshot_index.png) | ![日程ページ](docs/screenshot_schedule.png) |
+
 ---
 
 ## プロジェクト概要
@@ -53,8 +57,8 @@ cd summer-ride-plan
 # Python 3 の場合
 python3 -m http.server 8080
 
-# Node.js (npx) の場合（ポート 8080 で起動）
-npx serve -l 8080 .
+# Node.js (npx) の場合
+npx serve .
 ```
 
 ### 3. ブラウザで開く
@@ -105,8 +109,8 @@ summer-ride-plan/
     ├── css/
     │   └── plan.css    # 共通スタイルシート
     └── images/
-        ├── himejicastle.jpg      # 姫路城の写真（Photo by Sam Schiro on Pexels, Pexels License）
-        └── kurushimabridge.jpg   # 来島海峡大橋の写真（Photo by Meinen Ryu on Pexels, Pexels License）
+        ├── himejicastle.jpg      # 姫路城の写真（Photo by Sam Schiro on Pexels, CC0）
+        └── kurushimabridge.jpg   # 来島海峡大橋の写真（Photo by Meinen Ryu on Pexels, CC0）
 ```
 
 ---
@@ -114,4 +118,4 @@ summer-ride-plan/
 ## ライセンス
 
 本リポジトリのコードは TUSCC 内部向け資料として作成されました。
-画像素材は [Pexels](https://www.pexels.com/) の [Pexels License](https://www.pexels.com/license/) 素材を使用しています。
+画像素材は [Pexels](https://www.pexels.com/) の CC0 ライセンス素材を使用しています。
