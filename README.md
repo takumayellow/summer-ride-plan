@@ -5,6 +5,12 @@
 
 ---
 
+## 公開サイト
+
+**[→ サイトを見る](https://takumayellow.github.io/summer-ride-plan/)**
+
+---
+
 ## スクリーンショット
 
 > **TODO:** 実際のスクリーンショットを追加してください。
