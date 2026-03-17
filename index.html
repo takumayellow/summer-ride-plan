@@ -17,7 +17,13 @@
 
   <!-- 目次 / ナビ -->
   <nav id="site-nav" aria-label="ページ内ナビゲーション">
-    <ul>
+    <div class="nav-inner">
+      <span class="nav-logo">しまなみ海道ライド</span>
+      <button class="nav-hamburger" id="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="メニューを開く">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <ul id="nav-menu">
       <li><a href="index.html" aria-current="page">目的</a></li>
       <li><a href="schedule.html">日程</a></li>
       <li><a href="route.html">ルート</a></li>
@@ -84,6 +90,16 @@
         nav.classList.remove("scrolled");
       }
     });
+
+    // ハンバーガーメニュー
+    const toggle = document.getElementById("nav-toggle");
+    const menu = document.getElementById("nav-menu");
+    if (toggle && menu) {
+      toggle.addEventListener("click", () => {
+        const isOpen = menu.classList.toggle("open");
+        toggle.setAttribute("aria-expanded", isOpen);
+      });
+    }
   </script>
 </body>
 </html>

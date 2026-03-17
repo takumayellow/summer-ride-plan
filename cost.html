@@ -3,12 +3,19 @@
 <head>
   <meta charset="utf-8">
   <title>費用概算</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="common/css/plan.css">
 </head>
 <body>
   <header><h1>予算</h1></header>
-  <nav>
-    <ul>
+  <nav id="site-nav">
+    <div class="nav-inner">
+      <span class="nav-logo">しまなみ海道ライド</span>
+      <button class="nav-hamburger" id="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="メニューを開く">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <ul id="nav-menu">
       <li><a href="index.html">目的</a></li>
       <li><a href="schedule.html">日程</a></li>
       <li><a href="route.html">ルート</a></li>
@@ -21,13 +28,40 @@
     <section>
       <h2>費用内訳</h2>
       <table>
-        <tr><th>区分</th><th>内訳</th><th>金額(円)</th></tr>
-        <tr><td>宿泊費</td><td>7,000 × 3 泊</td><td>21,000</td></tr>
-        <tr><td>サポートカー</td><td>車両＋ガソリン（参加者で分担）</td><td>100</td></tr>
-        <tr><td>食費</td><td>朝500＋昼1,000＋夜1,500 × 4 日</td><td>12,000</td></tr>
-        <tr><td>新幹線</td><td>東京→名古屋</td><td>11,500</td></tr>
-        <tr><td>帰路航空</td><td>松山→羽田 ANA592</td><td>8,450</td></tr>
-        <tr><td colspan="2">合計</td><td>56,050</td></tr>
+        <thead>
+          <tr><th>区分</th><th>内訳</th><th>金額(円)</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-label="区分">宿泊費</td>
+            <td data-label="内訳">7,000 × 3 泊</td>
+            <td data-label="金額(円)">21,000</td>
+          </tr>
+          <tr>
+            <td data-label="区分">サポートカー</td>
+            <td data-label="内訳">車両＋ガソリン（参加者で分担）</td>
+            <td data-label="金額(円)">100</td>
+          </tr>
+          <tr>
+            <td data-label="区分">食費</td>
+            <td data-label="内訳">朝500＋昼1,000＋夜1,500 × 4 日</td>
+            <td data-label="金額(円)">12,000</td>
+          </tr>
+          <tr>
+            <td data-label="区分">新幹線</td>
+            <td data-label="内訳">東京→名古屋</td>
+            <td data-label="金額(円)">11,500</td>
+          </tr>
+          <tr>
+            <td data-label="区分">帰路航空</td>
+            <td data-label="内訳">松山→羽田 ANA592</td>
+            <td data-label="金額(円)">8,450</td>
+          </tr>
+          <tr>
+            <td data-label="区分" colspan="2">合計</td>
+            <td data-label="金額(円)">56,050</td>
+          </tr>
+        </tbody>
       </table>
     </section>
 
@@ -41,5 +75,17 @@
     </section>
   </main>
   <footer>&copy; 2025 TUSCC Summer Camp</footer>
+
+  <script>
+    // ハンバーガーメニュー
+    const toggle = document.getElementById("nav-toggle");
+    const menu = document.getElementById("nav-menu");
+    if (toggle && menu) {
+      toggle.addEventListener("click", () => {
+        const isOpen = menu.classList.toggle("open");
+        toggle.setAttribute("aria-expanded", isOpen);
+      });
+    }
+  </script>
 </body>
 </html>

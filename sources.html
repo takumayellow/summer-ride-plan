@@ -3,13 +3,19 @@
 <head>
   <meta charset="utf-8">
   <title>情報源</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="common/css/plan.css">
 </head>
 <body>
   <header><h1>情報の出所</h1></header>
-  <nav>
-    <ul>
+  <nav id="site-nav">
+    <div class="nav-inner">
+      <span class="nav-logo">しまなみ海道ライド</span>
+      <button class="nav-hamburger" id="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="メニューを開く">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <ul id="nav-menu">
       <li><a href="index.html">目的</a></li>
       <li><a href="schedule.html">日程</a></li>
       <li><a href="route.html">ルート</a></li>
@@ -69,5 +75,17 @@
     </section>
   </main>
   <footer>&copy; 2025 TUSCC Summer Camp</footer>
+
+  <script>
+    // ハンバーガーメニュー
+    const toggle = document.getElementById("nav-toggle");
+    const menu = document.getElementById("nav-menu");
+    if (toggle && menu) {
+      toggle.addEventListener("click", () => {
+        const isOpen = menu.classList.toggle("open");
+        toggle.setAttribute("aria-expanded", isOpen);
+      });
+    }
+  </script>
 </body>
 </html>
