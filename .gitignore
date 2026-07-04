@@ -1,0 +1,13 @@
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# エディタ
+.vscode/
+.idea/
+*.swp
+
+# ローカルプレビュー（npx serve 等）で生成され得るもの
+node_modules/
+*.log

@@ -13,11 +13,9 @@
 
 ## スクリーンショット
 
-> **TODO:** 実際のスクリーンショットを追加してください。
-
 | トップページ | 日程ページ |
 |---|---|
-| ![トップページ](docs/screenshot_index.png) | ![日程ページ](docs/screenshot_schedule.png) |
+| ![トップページ](docs/screenshot_index.jpg) | ![日程ページ](docs/screenshot_schedule.png) |
 
 ---
 
@@ -82,7 +80,7 @@ http://localhost:8080
 ブラウザでサイトを開くと、ナビゲーションバーから各ページへ移動できます。
 
 - **目的** (`index.html`) — 合宿の目的・チームビルディングの意義・持ち物リストを確認
-- **日程** (`schedule.html`) — 8日間の移動・観光・ライドスケジュールを確認
+- **日程** (`schedule.html`) — 7日間（8/21〜8/27）の移動・観光・ライドスケジュールを確認
 - **ルート** (`route.html`) — 出発から帰宅までのルートと Google Maps で地図を確認
 - **宿泊** (`lodging.html`) — 各宿泊先の詳細情報と地図を確認
 - **費用** (`cost.html`) — 交通費・宿泊費・食費の内訳を確認
@@ -98,7 +96,7 @@ http://localhost:8080
 | CSS カスタムプロパティ | カラーパレット管理 |
 | CSS Sticky Positioning | スクロール連動ナビゲーション |
 | CSS Animation (`@keyframes`) | ヒーローセクションのフェードインアニメーション |
-| Vanilla JavaScript | スクロールに応じた nav クラス付け替え |
+| Vanilla JavaScript | スクロールに応じた nav クラス付け替え・ハンバーガーメニュー開閉 |
 | Google Maps Embed API | ルートページと宿泊ページの地図埋め込み |
 
 ### ファイル構成
@@ -111,12 +109,15 @@ summer-ride-plan/
 ├── lodging.html        # 宿泊先一覧
 ├── cost.html           # 費用内訳
 ├── sources.html        # 参考情報源
-└── common/
-    ├── css/
-    │   └── plan.css    # 共通スタイルシート
-    └── images/
-        ├── himejicastle.jpg      # 姫路城の写真（Photo by Sam Schiro on Pexels, CC0）
-        └── kurushimabridge.jpg   # 来島海峡大橋の写真（Photo by Meinen Ryu on Pexels, CC0）
+├── common/
+│   ├── css/
+│   │   └── plan.css    # 共通スタイルシート
+│   └── images/
+│       ├── himejicastle.jpg      # 姫路城の写真（Photo by Sam Schiro on Pexels）
+│       └── kurushimabridge.jpg   # 来島海峡大橋の写真（Photo by Meinen Ryu on Pexels）
+└── docs/
+    ├── screenshot_index.jpg      # README 用スクリーンショット（トップページ）
+    └── screenshot_schedule.png   # README 用スクリーンショット（日程ページ）
 ```
 
 ---
@@ -124,4 +125,4 @@ summer-ride-plan/
 ## ライセンス
 
 本リポジトリのコードは TUSCC 内部向け資料として作成されました。
-画像素材は [Pexels](https://www.pexels.com/) の CC0 ライセンス素材を使用しています。
+画像素材は [Pexels](https://www.pexels.com/) の素材（[Pexels License](https://www.pexels.com/license/)）を使用しています。
